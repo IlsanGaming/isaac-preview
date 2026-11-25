@@ -55,19 +55,18 @@
   });
 })();
 
-// Career timeline: on phones show the 3 most recent roles per group, with a "더 보기" toggle.
+// Career timeline: on phones hide lower-priority roles (li.is-extra) behind a "더 보기" toggle.
 (() => {
   document.querySelectorAll('.timeline').forEach((list) => {
-    const extra = list.children.length - 3;
-    if (extra <= 0) return;
+    const extra = list.querySelectorAll(':scope > li.is-extra').length;
+    if (!extra) return;
     list.classList.add('is-collapsed');
     const btn = document.createElement('button');
     btn.type = 'button';
     btn.className = 'timeline-more';
-    btn.setAttribute('aria-expanded', 'false');
     const label = () => {
       const open = !list.classList.contains('is-collapsed');
-      btn.textContent = open ? '접기 ↑' : `이전 경력 ${extra}개 더 보기 ↓`;
+      btn.textContent = open ? '접기 ↑' : `경력 ${extra}개 더 보기 ↓`;
       btn.setAttribute('aria-expanded', String(open));
     };
     btn.addEventListener('click', () => { list.classList.toggle('is-collapsed'); label(); });

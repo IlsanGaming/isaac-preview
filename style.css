@@ -399,7 +399,7 @@ details p { margin-top: 12px; color: var(--gray); font-size: 13px; line-height: 
   .party-mark { margin-bottom: 8px; }
   .party-logo.has-img { height: 32px; padding: 4px 6px; }
   .timeline li { padding-bottom: 10px; }
-  .timeline.is-collapsed > li:nth-child(n+4) { display: none; }
+  .timeline.is-collapsed > li.is-extra { display: none; }
   .timeline-more { display: flex; justify-content: center; align-items: center; gap: 6px; width: 100%; margin: 4px 0 8px; padding: 12px; border: 1px dashed #cfd3d8; border-radius: 12px; background: #fff; color: var(--accent); font: inherit; font-size: 14px; font-weight: 700; cursor: pointer; }
 }
 
@@ -412,3 +412,5 @@ details p { margin-top: 12px; color: var(--gray); font-size: 13px; line-height: 
   .menu-panel a { padding: 12px 20px; }
   .menu-panel .menu-contact { padding-inline: 20px; }
 }
+/* 개혁신당 wordmark already shows the name */
+[data-party="reform"] .party-name { display: none; }
