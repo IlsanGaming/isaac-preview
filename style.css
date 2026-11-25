@@ -255,17 +255,17 @@ details p { margin-top: 12px; color: var(--gray); font-size: 13px; line-height: 
   .footer-grid { grid-template-columns: 1fr; }
 }
 
-/* ===== Party colors in Career =====
+/* ===== Career accents (all neutral gray by request; per-party hooks kept for easy change) =====
    Colors are approximate brand colors; confirm before publishing.
    To use real logos, replace the text inside .party-logo with <img src="assets/logos/....png" alt="">. */
 .timeline li { --party: #9aa0a7; }
-.timeline li:has(> [data-party="reform"])   { --party: #ff7210; }  /* 개혁신당 · 개혁연구원 */
-.timeline li:has(> [data-party="ppp"])      { --party: #e61e2b; }  /* 국민의힘 */
-.timeline li:has(> [data-party="people20"]) { --party: #ea5504; }  /* 국민의당 (2020) */
-.timeline li:has(> [data-party="bareun"])   { --party: #00b5e2; }  /* 바른미래당 */
-.timeline li:has(> [data-party="people16"]) { --party: #00a85a; }  /* 국민의당 (2016) */
-.timeline li:has(> [data-party="council"])  { --party: #c49a1a; }  /* 서대문구의회 마크 금색 */
-.timeline li:has(> [data-party="assembly"]) { --party: #6c7178; }
+.timeline li:has(> [data-party="reform"])   { --party: #5d6168; }  /* 개혁신당 · 개혁연구원 */
+.timeline li:has(> [data-party="ppp"])      { --party: #5d6168; }  /* 국민의힘 */
+.timeline li:has(> [data-party="people20"]) { --party: #5d6168; }  /* 국민의당 (2020) */
+.timeline li:has(> [data-party="bareun"])   { --party: #5d6168; }  /* 바른미래당 */
+.timeline li:has(> [data-party="people16"]) { --party: #5d6168; }  /* 국민의당 (2016) */
+.timeline li:has(> [data-party="council"])  { --party: #5d6168; }  /* 서대문구의회 마크 금색 */
+.timeline li:has(> [data-party="assembly"]) { --party: #5d6168; }
 
 .timeline li::before { border-color: var(--party); }
 .t-card { position: relative; box-shadow: inset 4px 0 0 var(--party); padding-right: 150px; }
@@ -275,7 +275,6 @@ details p { margin-top: 12px; color: var(--gray); font-size: 13px; line-height: 
 .party-logo { display: grid; place-items: center; min-width: 38px; height: 38px; padding: 0 7px; border-radius: 11px; background: var(--party); color: #fff; font-size: 11px; font-weight: 800; letter-spacing: -0.5px; white-space: nowrap; overflow: hidden; }
 .party-logo img { width: 100%; height: 100%; object-fit: contain; }
 [data-party="people16"] .party-logo { background: linear-gradient(135deg, #00a85a 50%, #00b5e2 50%); }
-[data-party="people16"] { box-shadow: inset 4px 0 0 #00a85a; }
 
 @media (max-width: 760px) {
   .t-card { padding-right: 18px; }
@@ -331,3 +330,31 @@ details p { margin-top: 12px; color: var(--gray); font-size: 13px; line-height: 
   .hero-flow small { font-size: 12px; }
 }
 /* Hero motion plays even when the OS asks for reduced motion (intentional, by request). */
+
+/* Logos in grayscale so the career reads as roles, not party identity; color returns on hover. */
+.party-logo.has-img img { filter: grayscale(1); opacity: .75; transition: filter .25s, opacity .25s; }
+.t-card:hover .party-logo.has-img img { filter: none; opacity: 1; }
+
+/* Why corporate */
+.why { background: #1e2124; color: #fff; }
+.why .eyebrow { color: #c4c8cd; }
+.why-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 56px; align-items: start; }
+.why-lead { margin-top: 18px; color: #c4c8cd; font-size: 17px; line-height: 1.9; word-break: keep-all; }
+.why-lead strong { color: #fff; }
+.why-list { display: grid; gap: 14px; margin: 0; padding: 0; list-style: none; }
+.why-list li { display: grid; grid-template-columns: 48px 1fr; gap: 12px; padding: 24px; border: 1px solid #ffffff1f; border-radius: 18px; background: #ffffff08; }
+.why-num { color: #8c9198; font-size: 15px; font-weight: 800; font-variant-numeric: tabular-nums; }
+.why-list h3 { font-size: 19px; }
+.why-list p { margin-top: 6px; color: #b9bdc2; font-size: 14px; line-height: 1.8; }
+@media (max-width: 1000px) { .why-layout { grid-template-columns: 1fr; gap: 28px; } }
+@media (max-width: 760px) { .why-list li { grid-template-columns: 1fr; gap: 6px; padding: 20px; } }
+
+/* Campaign note in career */
+.group-note { margin: -6px 0 16px; color: #6c7178; font-size: 13px; line-height: 1.7; }
+.campaign-tag { display: inline-block; margin-left: 6px; padding: 3px 8px; border-radius: 6px; background: #f1f2f4; color: #6c7178; font-size: 11px; font-weight: 700; }
+.footer-mail-2 { margin-top: 6px; font-size: 15px; }
+.edu-row { display: flex; align-items: center; gap: 14px; }
+.edu-logo { flex: none; width: 48px; height: 48px; padding: 6px; border-radius: 12px; background: #fff; border: 1px solid #e6e7e9; object-fit: contain; }
+
+/* Hero name in deep green (3.2:1 on the hero background, fine for large bold text) */
+.hero .hero-name { color: #2a7d57; }
