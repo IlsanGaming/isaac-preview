@@ -1,0 +1,10 @@
+# Source screenshots of the profile (private, not part of the site)
+정보/
+
+# Local tooling
+.claude/
+
+# OS junk
+Thumbs.db
+desktop.ini
+.DS_Store
