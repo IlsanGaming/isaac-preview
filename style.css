@@ -203,7 +203,7 @@ details p { margin-top: 12px; color: var(--gray); font-size: 13px; line-height: 
 
 /* Footer */
 .footer { padding: 64px 0 28px; background: #2b2e32; color: #fff; }
-.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr auto; gap: 32px; align-items: start; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr auto; gap: 32px; align-items: start; }
 .footer-brand { font-size: 30px; font-weight: 850; letter-spacing: -1px; }
 .footer-sub { margin-top: 4px; color: #c4c8cd; font-size: 13px; }
 .footer-label { margin-top: 24px; font-size: 11px; font-weight: 750; letter-spacing: 1.5px; }
@@ -358,3 +358,57 @@ details p { margin-top: 12px; color: var(--gray); font-size: 13px; line-height: 
 
 /* Hero name in deep green (3.2:1 on the hero background, fine for large bold text) */
 .hero .hero-name { color: #2a7d57; }
+
+/* Wordmark logo: ISAAC */
+.brand { width: auto; aspect-ratio: auto; height: 48px; padding: 0 18px; border-radius: 14px; font-size: 18px; letter-spacing: 0.06em; }
+.header[data-scrolled="true"] .brand { width: auto; height: 40px; padding: 0 14px; font-size: 15px; }
+@media (max-width: 760px) { .brand { width: auto; height: 44px; padding: 0 14px; font-size: 16px; } }
+
+/* Press rows that have no URL yet */
+.press-list .press-item { display: grid; grid-template-columns: 110px 1fr; align-items: center; gap: 16px; padding: 20px 24px; background: #fff; border: 1px solid #e9eaec; border-radius: 14px; }
+@media (max-width: 760px) { .press-list .press-item { grid-template-columns: 1fr; gap: 4px; padding: 16px 18px; } }
+
+/* ===== Deep green accent (brand color, matches hero name) ===== */
+:root { --accent: #2a7d57; --accent-dark: #22684a; --accent-light: #6cc69b; }
+.brand { background: var(--accent); }
+.primary { background: var(--accent); }
+.primary:hover { background: var(--accent-dark); }
+.section .eyebrow { color: var(--accent); }
+.why .eyebrow { color: var(--accent-light); }
+.menu-panel a[aria-current="true"] { text-decoration-color: var(--accent); }
+.menu-current { text-decoration-color: var(--accent-light); }
+.text-link { color: var(--accent); }
+.text-link:hover { color: var(--accent-dark); }
+.press-list a:hover { border-color: var(--accent); }
+.hero-flow::after { background: linear-gradient(90deg, #6cc69b00, var(--accent-light)); box-shadow: 0 0 12px #6cc69baa; }
+@keyframes node-lit { 0%, 20%, 100% { background: #1e2124; border-color: #ffffff66; box-shadow: none; } 4%, 14% { background: var(--accent-light); border-color: var(--accent-light); box-shadow: 0 0 0 6px #6cc69b2e, 0 0 16px #6cc69b99; } }
+.why-num { color: var(--accent-light); }
+
+/* Line icons (replace emoji) */
+.value-icon { color: var(--accent); background: #eaf4ef; }
+.value-icon svg { display: block; }
+.info-chips li { display: inline-flex; align-items: center; gap: 6px; }
+.chip-icon { color: var(--accent); flex: none; }
+
+/* ===== Career: compact + collapsible on phones ===== */
+.timeline-more { display: none; }
+@media (max-width: 760px) {
+  .t-card { padding: 16px 16px 16px 18px; }
+  .t-card h4 { margin-top: 8px; font-size: 17px; }
+  .t-card p:not(.role) { margin-top: 6px; font-size: 13px; line-height: 1.7; }
+  .party-mark { margin-bottom: 8px; }
+  .party-logo.has-img { height: 32px; padding: 4px 6px; }
+  .timeline li { padding-bottom: 10px; }
+  .timeline.is-collapsed > li:nth-child(n+4) { display: none; }
+  .timeline-more { display: flex; justify-content: center; align-items: center; gap: 6px; width: 100%; margin: 4px 0 8px; padding: 12px; border: 1px dashed #cfd3d8; border-radius: 12px; background: #fff; color: var(--accent); font: inherit; font-size: 14px; font-weight: 700; cursor: pointer; }
+}
+
+/* Menu has 7 items now: switch to the hamburger menu up to 900px (was 760px) */
+@media (max-width: 900px) {
+  .menu-toggle { display: flex; }
+  .menu-panel { position: absolute; top: calc(100% + 10px); right: 0; flex-direction: column; width: min(240px, calc(100vw - 40px)); padding: 8px; }
+  .header[data-scrolled="true"] .menu-panel { background: #fff; border-color: #e5e8eb; box-shadow: 0 12px 28px #191f2826; }
+  .menu-panel[data-open="false"] { display: none; }
+  .menu-panel a { padding: 12px 20px; }
+  .menu-panel .menu-contact { padding-inline: 20px; }
+}
