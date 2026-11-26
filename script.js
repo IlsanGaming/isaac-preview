@@ -74,3 +74,24 @@
     list.after(btn);
   });
 })();
+
+// Fold secondary cases / press items behind a "더 보기" button (all screen sizes).
+(() => {
+  const setup = (box, hidden, noun) => {
+    if (!hidden) return;
+    box.classList.add('is-folded');
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'timeline-more fold-more';
+    const label = () => {
+      const open = !box.classList.contains('is-folded');
+      btn.textContent = open ? '접기 ↑' : `${noun} ${hidden}개 더 보기 ↓`;
+      btn.setAttribute('aria-expanded', String(open));
+    };
+    btn.addEventListener('click', () => { box.classList.toggle('is-folded'); label(); });
+    label();
+    box.after(btn);
+  };
+  document.querySelectorAll('.case-grid[data-more]').forEach((g) => setup(g, g.querySelectorAll('.is-more').length, g.dataset.more));
+  document.querySelectorAll('.press-more[data-more]').forEach((b) => setup(b, b.querySelectorAll('li').length, b.dataset.more));
+})();

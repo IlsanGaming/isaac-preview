@@ -414,3 +414,70 @@ details p { margin-top: 12px; color: var(--gray); font-size: 13px; line-height: 
 }
 /* 개혁신당 wordmark already shows the name */
 [data-party="reform"] .party-name { display: none; }
+
+/* ===== Reference-site merge: case details, evidence scope, closing ===== */
+.case-body details { margin-top: 0; margin-bottom: 14px; padding-top: 14px; }
+.case-body details p strong { margin-right: 6px; color: #34383d; }
+.case-links { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; margin: 0 0 4px !important; color: var(--gray-light) !important; font-size: 12px !important; font-weight: 700; }
+.case-links a { padding: 4px 9px; border: 1px solid var(--line); border-radius: 999px; color: #4f545a; font-weight: 600; text-decoration: none; }
+.case-links a:hover { border-color: var(--accent); color: var(--accent-dark); }
+.press-title small { display: block; margin-top: 4px; color: #6c7178; font-size: 12.5px; font-weight: 500; }
+#press .group-title { margin-top: 36px; }
+#press .press-list { margin-top: 14px; }
+
+.closing { background: #1e2124; color: #fff; }
+.closing .eyebrow { color: var(--accent-light); }
+.closing-layout { max-width: 880px; }
+.closing h2 { color: #fff; }
+.quotes { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 36px 0 28px; }
+.quote { margin: 0; padding: 26px 26px 22px; border: 1px solid #ffffff1f; border-left: 3px solid var(--accent-light); border-radius: 16px; background: #ffffff08; }
+.quote blockquote { margin: 0; font-size: 19px; font-weight: 700; line-height: 1.6; letter-spacing: -0.02em; word-break: keep-all; }
+.quote figcaption { margin-top: 14px; color: #b9bdc2; font-size: 13px; }
+.quote figcaption span { color: #8c9198; }
+.closing-text { margin: 0 0 28px; color: #c4c8cd; font-size: 16px; line-height: 1.9; word-break: keep-all; }
+@media (max-width: 760px) { .quotes { grid-template-columns: 1fr; } .quote blockquote { font-size: 17px; } }
+
+/* Why: centered message on top, three cards in a row below */
+.why-layout { grid-template-columns: 1fr; gap: 48px; }
+.why-layout > div:first-child { max-width: 760px; margin: 0 auto; text-align: center; }
+.why-layout .eyebrow { justify-content: center; }
+.why-list { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.why-list li { grid-template-columns: 1fr; gap: 10px; align-content: start; }
+@media (max-width: 900px) { .why-list { grid-template-columns: 1fr; } }
+
+/* Case covers with article photos */
+.case-cover.has-photo { background: linear-gradient(to top, #000000d9 0%, #00000080 45%, #00000033 100%), var(--photo) var(--pos, center) / cover no-repeat, #2e3135; }
+.case-cover.has-photo::after { display: none; }
+.case-cover.has-photo strong, .case-cover.has-photo span { text-shadow: 0 1px 12px #0008; }
+.photo-credit { position: absolute; top: 14px; right: 16px; z-index: 1; padding: 3px 8px; border-radius: 6px; background: #0000008c; color: #ffffffcc; font-size: 10.5px; font-weight: 500; letter-spacing: 0; }
+.case-cover.has-photo.photo-light { background: linear-gradient(to right, #000000b3 0%, #00000059 40%, #00000000 65%), var(--photo) var(--pos, center) / cover no-repeat, #26292d; }
+.photo-credit { top: auto; bottom: 12px; right: 14px; }
+
+/* Press: two articles per row */
+#press .press-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+#press .press-list a { height: 100%; grid-template-columns: 1fr auto; gap: 4px 12px; padding: 18px 20px; }
+#press .press-src { grid-column: 1 / -1; }
+@media (max-width: 760px) { #press .press-list { grid-template-columns: 1fr; } }
+.closing-layout { max-width: none; }
+.closing-layout > .closing-text { max-width: 880px; }
+.closing h2 { text-align: center; }
+.closing .eyebrow { justify-content: center; }
+.closing-layout > .closing-text { margin: 0 auto; text-align: center; }
+.closing-layout > .closing-text { max-width: none; }
+@media (max-width: 760px) { .closing-text br { display: none; } }
+.quote { text-align: center; }
+
+/* Folded secondary cases and press group */
+.case-grid.is-folded > .is-more { display: none; }
+.press-more.is-folded { display: none; }
+.fold-more { display: block; margin: 24px auto 0; }
+.timeline-more.fold-more { display: flex; justify-content: center; align-items: center; width: 100%; max-width: 420px; margin: 24px auto 0; padding: 14px; border: 1px dashed #cfd3d8; border-radius: 12px; background: #fff; color: var(--accent); font: inherit; font-size: 14px; font-weight: 700; cursor: pointer; }
+.timeline-more.fold-more:hover { border-color: var(--accent); }
+
+/* Text covers: a verbatim line from the statement instead of a press photo */
+.case-cover.has-quote { justify-content: space-between; }
+.cover-quote { position: relative; z-index: 1; margin: 0; max-width: 92%; color: #ffffffeb; font-size: clamp(16px, 1.6vw, 19px); font-weight: 650; line-height: 1.55; letter-spacing: -0.02em; word-break: keep-all; }
+.cover-quote small { display: block; margin-top: 8px; color: #ffffff99; font-size: 11.5px; font-weight: 500; letter-spacing: 0; }
+.case-cover.has-quote strong { font-size: clamp(22px, 2.2vw, 28px); }
+.case-cover.has-quote { aspect-ratio: auto; min-height: 220px; gap: 18px; }
+.case-cover.has-quote > span { margin-top: auto; }
