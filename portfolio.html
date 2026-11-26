@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Review build: keep out of search engines. Remove this line when publishing for real. -->
+  <meta name="robots" content="noindex, nofollow" />
+  <title>주이삭 | 포트폴리오 (PDF용)</title>
+  <meta name="description" content="PR 매니저 주이삭의 포트폴리오 요약본입니다." />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <style>
+    :root {
+      --ink: #1c1e21; --gray: #5d6269; --gray-light: #8c9198; --line: #e6e7e9; --soft: #f6f7f8;
+      --accent: #2a7d57; --accent-dark: #22684a; --accent-light: #6cc69b; --night: #1e2124;
+      color: var(--ink);
+      font-family: Pretendard, Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", "Malgun Gothic", sans-serif;
+      line-height: 1.55; -webkit-font-smoothing: antialiased;
+    }
+    * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    body { margin: 0; background: #dfe1e4; }
+    a { color: inherit; text-decoration: none; }
+    h1, h2, h3, p, ul, ol, dl, dd { margin: 0; }
+    ul, ol { padding: 0; list-style: none; }
+    h1, h2, h3 { letter-spacing: -0.03em; word-break: keep-all; }
+    p, li, dd { word-break: keep-all; }
+
+    .bar { position: sticky; top: 0; z-index: 5; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; padding: 12px max(16px, calc((100% - 210mm) / 2)); background: #ffffffee; border-bottom: 1px solid var(--line); backdrop-filter: blur(8px); }
+    .bar-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border: 1px solid var(--line); border-radius: 10px; background: #fff; color: var(--ink); font: inherit; font-size: 14px; font-weight: 650; cursor: pointer; }
+    .btn:hover { background: #eceef0; }
+    .btn.primary { border-color: var(--accent); background: var(--accent); color: #fff; }
+    .btn.primary:hover { background: var(--accent-dark); }
+
+    /* A4 pages */
+    .page { position: relative; width: 210mm; height: 297mm; margin: 18px auto; padding: 13mm 16mm 14mm; background: #fff; overflow: hidden; box-shadow: 0 2px 14px #0000001f; }
+    .page-no { position: absolute; left: 16mm; right: 16mm; bottom: 8mm; display: flex; justify-content: space-between; color: var(--gray-light); font-size: 8.5pt; }
+    .eyebrow { display: flex; align-items: center; gap: 7px; color: var(--accent); font-size: 8.5pt; font-weight: 800; letter-spacing: 1.6px; }
+    .eyebrow::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+    h2 { margin-top: 5pt; font-size: 20pt; line-height: 1.2; }
+    .lead { margin-top: 6pt; color: var(--gray); font-size: 10pt; }
+
+    /* Cover */
+    .cover { display: flex; flex-direction: column; padding: 20mm 18mm 16mm; background: var(--night); color: #fff; }
+    .cover .eyebrow { color: #fff; letter-spacing: 2px; }
+    .cover-top { display: grid; grid-template-columns: 1fr 40mm; gap: 12mm; align-items: start; margin-top: 10mm; }
+    .cover-name { color: var(--accent-light); font-size: 20pt; font-weight: 800; letter-spacing: -0.02em; }
+    .cover h1 { margin-top: 5mm; font-size: 33pt; line-height: 1.22; }
+    .cover h1 span { color: #b9bdc3; }
+    .cover-desc { margin-top: 8mm; max-width: 118mm; color: #d5d8dc; font-size: 11.5pt; line-height: 1.7; }
+    .cover-photo { width: 40mm; height: 40mm; border-radius: 50%; object-fit: cover; border: 1.2mm solid #ffffff2e; }
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 10mm; border-top: 1px solid #ffffff2b; }
+    .stats li { padding: 6mm 4mm 0 0; }
+    .stats li + li { padding-left: 5mm; border-left: 1px solid #ffffff1f; }
+    .stats strong { display: block; font-size: 24pt; line-height: 1; letter-spacing: -0.03em; }
+    .stats em { margin-left: 2px; font-size: 11pt; font-style: normal; font-weight: 600; }
+    .stats span { display: block; margin-top: 3mm; color: #c3c7cc; font-size: 8.8pt; line-height: 1.45; }
+    .toc { margin-top: 8mm; margin-bottom: 7mm; }
+    .toc-title { color: #a9aeb5; font-size: 8.5pt; font-weight: 800; letter-spacing: 1.6px; }
+    .toc ol { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm 8mm; margin-top: 4mm; }
+    .toc li { display: grid; grid-template-columns: 13mm 1fr; gap: 2mm; padding: 3.4mm 4mm; border: 1px solid #ffffff24; border-radius: 3mm; background: #ffffff0a; }
+    .toc time { color: var(--accent-light); font-size: 9.6pt; font-weight: 800; }
+    .toc b { display: block; font-size: 10.6pt; }
+    .toc span { display: block; margin-top: 0.8mm; color: #c3c7cc; font-size: 8.8pt; }
+    .cover-links { display: grid; grid-template-columns: 1fr 34mm; gap: 10mm; align-items: end; margin-top: auto; padding-top: 8mm; border-top: 1px solid #ffffff2b; }
+    .link-row { display: flex; flex-wrap: wrap; gap: 3mm; }
+    .cta { display: inline-flex; align-items: center; gap: 8px; padding: 3.6mm 6mm; border-radius: 3mm; font-size: 11pt; font-weight: 700; }
+    .cta.primary { background: var(--accent); color: #fff; }
+    .cta.light { background: #fff; color: var(--ink); }
+    .url-list { display: grid; gap: 1.6mm; margin-top: 6mm; font-size: 9.6pt; }
+    .url-list b { display: inline-block; width: 21mm; color: #a9aeb5; font-weight: 600; }
+    .url-list a { text-decoration: underline; text-underline-offset: 3px; }
+    .qr { text-align: center; }
+    .qr svg { display: block; width: 34mm; height: 34mm; border-radius: 2mm; }
+    .qr small { display: block; margin-top: 2mm; color: #c3c7cc; font-size: 8pt; }
+
+    /* Cases */
+    .case { margin-top: 5.5mm; border: 1px solid var(--line); border-radius: 4mm; overflow: hidden; break-inside: avoid; }
+    .case-head { display: grid; grid-template-columns: 1fr auto; gap: 6mm; align-items: center; min-height: 26mm; padding: 4.5mm 7mm; background: var(--night); color: #fff; }
+    .case-head.has-photo { grid-template-columns: 1fr 52mm; padding-right: 0; padding-top: 0; padding-bottom: 0; }
+    .case-head.has-photo > div:first-child { padding: 4.5mm 0; }
+    .case-head .tag { color: #c3c7cc; font-size: 7.8pt; font-weight: 700; letter-spacing: 1.4px; }
+    .case-head h3 { margin-top: 1.5mm; font-size: 15pt; line-height: 1.25; }
+    .case-head .org { margin-top: 1.5mm; color: #d5d8dc; font-size: 9.2pt; font-weight: 600; }
+    .case-head blockquote { margin: 0; max-width: 80mm; word-break: keep-all; padding-left: 4mm; border-left: 0.8mm solid var(--accent-light); font-size: 10.6pt; font-weight: 650; line-height: 1.5; }
+    .case-head blockquote small { display: block; margin-top: 1.5mm; color: #a9aeb5; font-size: 7.8pt; font-weight: 500; }
+    .case-photo { position: relative; align-self: stretch; min-height: 26mm; background-size: cover; background-position: right center; }
+    .case-photo small { position: absolute; right: 2mm; bottom: 1.5mm; padding: 0.6mm 1.6mm; border-radius: 1mm; background: #000000a6; color: #fff; font-size: 6.4pt; }
+    .case-body { padding: 4.5mm 7mm 5mm; }
+    .flow { display: flex; flex-wrap: wrap; gap: 1.6mm; }
+    .flow li { padding: 1mm 2.6mm; border-radius: 1.4mm; background: var(--soft); color: #4f545a; font-size: 8.2pt; font-weight: 600; }
+    .flow li + li::before { content: "→ "; color: var(--gray-light); }
+    .star { margin-top: 3mm; }
+    .star div { display: grid; grid-template-columns: 13mm 1fr; gap: 2mm; padding: 1mm 0; font-size: 9.5pt; }
+    .star dt { color: var(--gray-light); font-weight: 700; }
+    .more { margin-top: 2.4mm; padding-top: 2.4mm; border-top: 1px solid var(--line); font-size: 9pt; color: #3d4147; }
+    .more p + p { margin-top: 1.4mm; }
+    .more strong { margin-right: 2mm; color: var(--ink); }
+    .refs { display: flex; flex-wrap: wrap; align-items: center; gap: 1.6mm 2mm; margin-top: 2.8mm; font-size: 8.4pt; color: var(--gray); }
+    .refs a { padding: 0.7mm 2.4mm; border: 1px solid var(--line); border-radius: 99px; color: var(--accent); font-weight: 700; }
+    .apply { margin-top: 2.8mm; padding: 2.2mm 3.4mm; border-radius: 2mm; background: #eaf4ef; font-size: 9.2pt; }
+    .apply strong { margin-right: 2mm; color: var(--accent-dark); }
+
+    /* Why / strengths / career */
+    .why { display: grid; gap: 3mm; margin-top: 6mm; }
+    .why li { display: grid; grid-template-columns: 9mm 1fr; gap: 3mm; padding: 4mm 5mm; border: 1px solid var(--line); border-radius: 3mm; break-inside: avoid; }
+    .why b { color: var(--accent); font-size: 10pt; }
+    .why h3 { font-size: 11pt; }
+    .why p { margin-top: 1mm; font-size: 9.4pt; color: #3d4147; }
+    .sub { margin-top: 8mm; font-size: 11.5pt; font-weight: 800; }
+    .strengths { display: grid; grid-template-columns: 1fr 1fr; gap: 0 8mm; margin-top: 3mm; font-size: 9.2pt; }
+    .strengths li { display: grid; grid-template-columns: 30mm 1fr; gap: 2mm; padding: 1.8mm 0; border-top: 1px solid var(--line); }
+    .strengths b { font-weight: 700; }
+    .strengths span { color: var(--gray); }
+    .career { margin-top: 3mm; font-size: 9.2pt; }
+    .career li { display: grid; grid-template-columns: 34mm 1fr; gap: 3mm; padding: 1.7mm 0; border-top: 1px solid var(--line); }
+    .career time { color: var(--gray); font-weight: 600; font-variant-numeric: tabular-nums; }
+    .career b { font-weight: 700; }
+    .career span { color: var(--gray); }
+    .note { margin-top: 2mm; color: var(--gray); font-size: 8.4pt; }
+
+    /* Sources */
+    .sources { margin-top: 5mm; font-size: 9pt; }
+    .sources li { display: grid; grid-template-columns: 22mm 1fr; gap: 3mm; padding: 2mm 0; border-top: 1px solid var(--line); break-inside: avoid; }
+    .sources b { font-weight: 700; }
+    .sources small { display: block; color: var(--gray); font-size: 8.2pt; }
+    .sources a { display: block; color: var(--accent-dark); font-size: 7.8pt; word-break: break-all; text-decoration: underline; text-underline-offset: 2px; }
+    .end { display: grid; grid-template-columns: 1fr 30mm; gap: 8mm; align-items: center; margin-top: 8mm; padding: 6mm 7mm; border-radius: 4mm; background: var(--night); color: #fff; }
+    .end h3 { font-size: 13pt; }
+    .end p { margin-top: 2mm; color: #d5d8dc; font-size: 9.4pt; }
+    .end .url-list { margin-top: 4mm; font-size: 9.4pt; }
+    .end .qr svg { width: 30mm; height: 30mm; }
+
+    @media screen and (max-width: 820px) {
+      .page { zoom: 0.46; margin: 10px auto; }
+      body { overflow-x: hidden; }
+    }
+    @page { size: A4; margin: 0; }
+    @media print {
+      body { background: #fff; }
+      .bar { display: none !important; }
+      .page { margin: 0; box-shadow: none; break-after: page; zoom: 1; }
+      .page:last-of-type { break-after: auto; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bar">
+    <a class="btn" href="index.html">← 포트폴리오 사이트로</a>
+    <div class="bar-actions">
+      <a class="btn primary" href="assets/portfolio-ju-isaac.pdf" download="주이삭_포트폴리오.pdf">PDF 내려받기 ↓</a>
+      <button class="btn" type="button" onclick="window.print()">인쇄</button>
+    </div>
+  </div>
+
+  <!-- ===== 1. Cover ===== -->
+  <section class="page cover">
+    <p class="eyebrow">PORTFOLIO · PR MANAGER · MEDIA RELATIONS · PUBLIC AFFAIRS</p>
+    <div class="cover-top">
+      <div>
+        <p class="cover-name">주이삭</p>
+        <h1>이슈를 읽고,<br /><span>메시지로 신뢰를 만드는</span><br />PR 매니저</h1>
+        <p class="cover-desc">2016년부터 언론 대응, 공식 메시지 작성, 이해관계자 조율을 공보실과 의회 현장에서 해 왔습니다. 이제 그 경험을 기업의 평판과 성장에 쓰려 합니다.</p>
+      </div>
+      <img class="cover-photo" src="assets/profile.jpg?v=2" alt="주이삭 프로필 사진" />
+    </div>
+    <ul class="stats">
+      <li><strong>10<em>년</em></strong><span>공보 · 대외협력 현장<br />(2016–2026)</span></li>
+      <li><strong>4<em>회</em></strong><span>대변인 · 부대변인 역임</span></li>
+      <li><strong>3<em>회</em></strong><span>공보팀 구성 · 운영</span></li>
+      <li><strong>8<em>년</em></strong><span>서대문구의원 재선 ·<br />2022년 지역구 최다득표</span></li>
+    </ul>
+    <div class="toc">
+      <p class="toc-title">이 문서에 담은 대표 사례</p>
+      <ol>
+        <li><time>2024</time><div><b>대변인 공식 논평</b><span>쟁점을 한 문장으로 짚어 기사에 인용된 논평</span></div></li>
+        <li><time>2018</time><div><b>'바미하다' 논평</b><span>비판의 언어를 조직의 가치로 바꾼 리프레이밍</span></div></li>
+        <li><time>2017</time><div><b>대통령선거 공보현장팀</b><span>전국 유세 기자단 운영과 '공보선행' 도입</span></div></li>
+        <li><time>2020</time><div><b>창당준비위원회 공보팀장</b><span>공보팀 구성과 메시지 생산 체계 운영</span></div></li>
+      </ol>
+    </div>
+    <div class="cover-links">
+      <div>
+        <div class="link-row">
+          <a class="cta primary" href="https://ju-isaac.github.io">포트폴리오 사이트 보기 →</a>
+          <a class="cta light" href="https://ju-isaac.github.io/resume.html">이력서 보기 →</a>
+        </div>
+        <ul class="url-list">
+          <li><b>사이트</b><a href="https://ju-isaac.github.io">ju-isaac.github.io</a></li>
+          <li><b>이력서</b><a href="https://ju-isaac.github.io/resume.html">ju-isaac.github.io/resume.html</a></li>
+          <li><b>연락처</b>010-3230-4504 · isaactic.lab@gmail.com</li>
+          <li><b>희망 분야</b>기업 PR · 커뮤니케이션 · 대외협력</li>
+        </ul>
+      </div>
+      <div class="qr"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 -4 37 37" shape-rendering="crispEdges" role="img" aria-label="QR"><rect x="-4" y="-4" width="37" height="37" fill="#fff"/><path fill="#111" d="M0 0h1v1h-1zM1 0h1v1h-1zM2 0h1v1h-1zM3 0h1v1h-1zM4 0h1v1h-1zM5 0h1v1h-1zM6 0h1v1h-1zM8 0h1v1h-1zM10 0h1v1h-1zM18 0h1v1h-1zM22 0h1v1h-1zM23 0h1v1h-1zM24 0h1v1h-1zM25 0h1v1h-1zM26 0h1v1h-1zM27 0h1v1h-1zM28 0h1v1h-1zM0 1h1v1h-1zM6 1h1v1h-1zM16 1h1v1h-1zM17 1h1v1h-1zM18 1h1v1h-1zM19 1h1v1h-1zM22 1h1v1h-1zM28 1h1v1h-1zM0 2h1v1h-1zM2 2h1v1h-1zM3 2h1v1h-1zM4 2h1v1h-1zM6 2h1v1h-1zM9 2h1v1h-1zM12 2h1v1h-1zM13 2h1v1h-1zM15 2h1v1h-1zM16 2h1v1h-1zM17 2h1v1h-1zM20 2h1v1h-1zM22 2h1v1h-1zM24 2h1v1h-1zM25 2h1v1h-1zM26 2h1v1h-1zM28 2h1v1h-1zM0 3h1v1h-1zM2 3h1v1h-1zM3 3h1v1h-1zM4 3h1v1h-1zM6 3h1v1h-1zM8 3h1v1h-1zM9 3h1v1h-1zM11 3h1v1h-1zM12 3h1v1h-1zM14 3h1v1h-1zM15 3h1v1h-1zM16 3h1v1h-1zM20 3h1v1h-1zM22 3h1v1h-1zM24 3h1v1h-1zM25 3h1v1h-1zM26 3h1v1h-1zM28 3h1v1h-1zM0 4h1v1h-1zM2 4h1v1h-1zM3 4h1v1h-1zM4 4h1v1h-1zM6 4h1v1h-1zM8 4h1v1h-1zM12 4h1v1h-1zM13 4h1v1h-1zM14 4h1v1h-1zM16 4h1v1h-1zM17 4h1v1h-1zM18 4h1v1h-1zM22 4h1v1h-1zM24 4h1v1h-1zM25 4h1v1h-1zM26 4h1v1h-1zM28 4h1v1h-1zM0 5h1v1h-1zM6 5h1v1h-1zM8 5h1v1h-1zM9 5h1v1h-1zM11 5h1v1h-1zM13 5h1v1h-1zM14 5h1v1h-1zM15 5h1v1h-1zM17 5h1v1h-1zM19 5h1v1h-1zM20 5h1v1h-1zM22 5h1v1h-1zM28 5h1v1h-1zM0 6h1v1h-1zM1 6h1v1h-1zM2 6h1v1h-1zM3 6h1v1h-1zM4 6h1v1h-1zM5 6h1v1h-1zM6 6h1v1h-1zM8 6h1v1h-1zM10 6h1v1h-1zM12 6h1v1h-1zM14 6h1v1h-1zM16 6h1v1h-1zM18 6h1v1h-1zM20 6h1v1h-1zM22 6h1v1h-1zM23 6h1v1h-1zM24 6h1v1h-1zM25 6h1v1h-1zM26 6h1v1h-1zM27 6h1v1h-1zM28 6h1v1h-1zM8 7h1v1h-1zM9 7h1v1h-1zM10 7h1v1h-1zM12 7h1v1h-1zM14 7h1v1h-1zM17 7h1v1h-1zM0 8h1v1h-1zM4 8h1v1h-1zM6 8h1v1h-1zM7 8h1v1h-1zM8 8h1v1h-1zM9 8h1v1h-1zM11 8h1v1h-1zM13 8h1v1h-1zM14 8h1v1h-1zM15 8h1v1h-1zM16 8h1v1h-1zM17 8h1v1h-1zM20 8h1v1h-1zM21 8h1v1h-1zM22 8h1v1h-1zM23 8h1v1h-1zM24 8h1v1h-1zM25 8h1v1h-1zM28 8h1v1h-1zM3 9h1v1h-1zM7 9h1v1h-1zM12 9h1v1h-1zM17 9h1v1h-1zM18 9h1v1h-1zM21 9h1v1h-1zM22 9h1v1h-1zM23 9h1v1h-1zM24 9h1v1h-1zM25 9h1v1h-1zM26 9h1v1h-1zM27 9h1v1h-1zM28 9h1v1h-1zM1 10h1v1h-1zM2 10h1v1h-1zM4 10h1v1h-1zM5 10h1v1h-1zM6 10h1v1h-1zM8 10h1v1h-1zM10 10h1v1h-1zM11 10h1v1h-1zM13 10h1v1h-1zM14 10h1v1h-1zM15 10h1v1h-1zM17 10h1v1h-1zM21 10h1v1h-1zM22 10h1v1h-1zM28 10h1v1h-1zM8 11h1v1h-1zM9 11h1v1h-1zM12 11h1v1h-1zM13 11h1v1h-1zM15 11h1v1h-1zM16 11h1v1h-1zM17 11h1v1h-1zM18 11h1v1h-1zM20 11h1v1h-1zM23 11h1v1h-1zM24 11h1v1h-1zM25 11h1v1h-1zM27 11h1v1h-1zM28 11h1v1h-1zM3 12h1v1h-1zM6 12h1v1h-1zM9 12h1v1h-1zM11 12h1v1h-1zM12 12h1v1h-1zM13 12h1v1h-1zM17 12h1v1h-1zM19 12h1v1h-1zM21 12h1v1h-1zM27 12h1v1h-1zM0 13h1v1h-1zM5 13h1v1h-1zM7 13h1v1h-1zM8 13h1v1h-1zM10 13h1v1h-1zM11 13h1v1h-1zM12 13h1v1h-1zM13 13h1v1h-1zM14 13h1v1h-1zM16 13h1v1h-1zM17 13h1v1h-1zM18 13h1v1h-1zM22 13h1v1h-1zM23 13h1v1h-1zM24 13h1v1h-1zM25 13h1v1h-1zM26 13h1v1h-1zM27 13h1v1h-1zM28 13h1v1h-1zM0 14h1v1h-1zM3 14h1v1h-1zM4 14h1v1h-1zM5 14h1v1h-1zM6 14h1v1h-1zM7 14h1v1h-1zM8 14h1v1h-1zM9 14h1v1h-1zM10 14h1v1h-1zM11 14h1v1h-1zM12 14h1v1h-1zM16 14h1v1h-1zM18 14h1v1h-1zM20 14h1v1h-1zM21 14h1v1h-1zM22 14h1v1h-1zM25 14h1v1h-1zM26 14h1v1h-1zM28 14h1v1h-1zM0 15h1v1h-1zM1 15h1v1h-1zM2 15h1v1h-1zM3 15h1v1h-1zM5 15h1v1h-1zM7 15h1v1h-1zM8 15h1v1h-1zM9 15h1v1h-1zM10 15h1v1h-1zM12 15h1v1h-1zM14 15h1v1h-1zM17 15h1v1h-1zM18 15h1v1h-1zM22 15h1v1h-1zM24 15h1v1h-1zM27 15h1v1h-1zM28 15h1v1h-1zM1 16h1v1h-1zM2 16h1v1h-1zM3 16h1v1h-1zM6 16h1v1h-1zM11 16h1v1h-1zM12 16h1v1h-1zM13 16h1v1h-1zM14 16h1v1h-1zM15 16h1v1h-1zM16 16h1v1h-1zM18 16h1v1h-1zM20 16h1v1h-1zM21 16h1v1h-1zM27 16h1v1h-1zM0 17h1v1h-1zM4 17h1v1h-1zM7 17h1v1h-1zM10 17h1v1h-1zM12 17h1v1h-1zM17 17h1v1h-1zM18 17h1v1h-1zM22 17h1v1h-1zM24 17h1v1h-1zM25 17h1v1h-1zM27 17h1v1h-1zM28 17h1v1h-1zM2 18h1v1h-1zM3 18h1v1h-1zM6 18h1v1h-1zM7 18h1v1h-1zM13 18h1v1h-1zM14 18h1v1h-1zM15 18h1v1h-1zM18 18h1v1h-1zM20 18h1v1h-1zM21 18h1v1h-1zM22 18h1v1h-1zM26 18h1v1h-1zM28 18h1v1h-1zM4 19h1v1h-1zM7 19h1v1h-1zM9 19h1v1h-1zM10 19h1v1h-1zM11 19h1v1h-1zM13 19h1v1h-1zM15 19h1v1h-1zM16 19h1v1h-1zM19 19h1v1h-1zM20 19h1v1h-1zM22 19h1v1h-1zM27 19h1v1h-1zM28 19h1v1h-1zM0 20h1v1h-1zM1 20h1v1h-1zM2 20h1v1h-1zM3 20h1v1h-1zM6 20h1v1h-1zM7 20h1v1h-1zM9 20h1v1h-1zM11 20h1v1h-1zM12 20h1v1h-1zM13 20h1v1h-1zM19 20h1v1h-1zM20 20h1v1h-1zM21 20h1v1h-1zM22 20h1v1h-1zM23 20h1v1h-1zM24 20h1v1h-1zM25 20h1v1h-1zM28 20h1v1h-1zM11 21h1v1h-1zM12 21h1v1h-1zM13 21h1v1h-1zM14 21h1v1h-1zM16 21h1v1h-1zM18 21h1v1h-1zM19 21h1v1h-1zM20 21h1v1h-1zM24 21h1v1h-1zM28 21h1v1h-1zM0 22h1v1h-1zM1 22h1v1h-1zM2 22h1v1h-1zM3 22h1v1h-1zM4 22h1v1h-1zM5 22h1v1h-1zM6 22h1v1h-1zM8 22h1v1h-1zM9 22h1v1h-1zM10 22h1v1h-1zM12 22h1v1h-1zM16 22h1v1h-1zM17 22h1v1h-1zM19 22h1v1h-1zM20 22h1v1h-1zM22 22h1v1h-1zM24 22h1v1h-1zM25 22h1v1h-1zM26 22h1v1h-1zM28 22h1v1h-1zM0 23h1v1h-1zM6 23h1v1h-1zM9 23h1v1h-1zM12 23h1v1h-1zM14 23h1v1h-1zM17 23h1v1h-1zM18 23h1v1h-1zM19 23h1v1h-1zM20 23h1v1h-1zM24 23h1v1h-1zM27 23h1v1h-1zM0 24h1v1h-1zM2 24h1v1h-1zM3 24h1v1h-1zM4 24h1v1h-1zM6 24h1v1h-1zM8 24h1v1h-1zM10 24h1v1h-1zM13 24h1v1h-1zM14 24h1v1h-1zM15 24h1v1h-1zM16 24h1v1h-1zM18 24h1v1h-1zM19 24h1v1h-1zM20 24h1v1h-1zM21 24h1v1h-1zM22 24h1v1h-1zM23 24h1v1h-1zM24 24h1v1h-1zM25 24h1v1h-1zM28 24h1v1h-1zM0 25h1v1h-1zM2 25h1v1h-1zM3 25h1v1h-1zM4 25h1v1h-1zM6 25h1v1h-1zM9 25h1v1h-1zM11 25h1v1h-1zM12 25h1v1h-1zM13 25h1v1h-1zM17 25h1v1h-1zM19 25h1v1h-1zM21 25h1v1h-1zM23 25h1v1h-1zM27 25h1v1h-1zM0 26h1v1h-1zM2 26h1v1h-1zM3 26h1v1h-1zM4 26h1v1h-1zM6 26h1v1h-1zM9 26h1v1h-1zM10 26h1v1h-1zM12 26h1v1h-1zM15 26h1v1h-1zM18 26h1v1h-1zM19 26h1v1h-1zM20 26h1v1h-1zM21 26h1v1h-1zM25 26h1v1h-1zM26 26h1v1h-1zM27 26h1v1h-1zM28 26h1v1h-1zM0 27h1v1h-1zM6 27h1v1h-1zM11 27h1v1h-1zM12 27h1v1h-1zM15 27h1v1h-1zM16 27h1v1h-1zM20 27h1v1h-1zM21 27h1v1h-1zM22 27h1v1h-1zM23 27h1v1h-1zM24 27h1v1h-1zM25 27h1v1h-1zM27 27h1v1h-1zM28 27h1v1h-1zM0 28h1v1h-1zM1 28h1v1h-1zM2 28h1v1h-1zM3 28h1v1h-1zM4 28h1v1h-1zM5 28h1v1h-1zM6 28h1v1h-1zM8 28h1v1h-1zM9 28h1v1h-1zM12 28h1v1h-1zM13 28h1v1h-1zM19 28h1v1h-1zM20 28h1v1h-1zM21 28h1v1h-1zM22 28h1v1h-1zM25 28h1v1h-1zM27 28h1v1h-1z"/></svg><small>휴대폰으로 사이트 열기</small></div>
+    </div>
+  </section>
+
+  <!-- ===== 2. Cases 1-2 ===== -->
+  <section class="page">
+    <p class="eyebrow">CASES 1 – 2</p>
+    <h2>대표 사례: 메시지</h2>
+    <p class="lead">공식 논평을 직접 기획하고 썼습니다. 아래 인용문은 모두 본인이 쓴 논평에서 가져왔습니다.</p>
+
+    <article class="case">
+      <div class="case-head">
+        <div>
+          <p class="tag">OFFICIAL STATEMENT · 2024</p>
+          <h3>대변인 공식 논평</h3>
+          <p class="org">개혁신당 중앙당 대변인 · 쟁점을 한 문장으로 짚는 논평</p>
+        </div>
+        <blockquote>“문제는 그 신뢰를 회복하기 위한 메시지를 선제적으로 내놓지 않았다는 것이다.”<small>2024.5.9 논평 원문 중</small></blockquote>
+      </div>
+      <div class="case-body">
+        <ul class="flow"><li>현안 파악</li><li>쟁점 선정</li><li>논평 작성</li><li>기자 설명</li></ul>
+        <dl class="star">
+          <div><dt>상황</dt><dd>2024년 5월 민정수석 신설(7일)과 대통령 기자회견(9일)이 이틀 간격으로 이어졌습니다.</dd></div>
+          <div><dt>판단</dt><dd>민정수석 논평은 이미 드러난 민심에 어떻게 응답할지를, 기자회견 논평은 실제로 달라진 입장이 있는지를 물었습니다.</dd></div>
+          <div><dt>결과</dt><dd>5월 7일 논평은 중앙일보에, 5월 9일 논평은 뉴시스에 대변인 명의로 인용됐습니다.</dd></div>
+        </dl>
+        <div class="more">
+          <p><strong>맡은 일</strong>현안을 파악해 당의 입장을 기획·작성했습니다. 기자들에게는 논평이 나온 배경과 쟁점을 설명했습니다.</p>
+          <p><strong>실행</strong>두 건 모두 사실관계를 먼저 밝힌 뒤 쟁점을 한 문장으로 짚었습니다. 5월 9일 논평의 위 문장은 뉴시스 기사에 그대로 인용됐습니다.</p>
+          <p><strong>기준</strong>제3당의 논평은 기자가 기사를 쓰기 전에 도착하지 않으면 실리지 않는 경우가 많습니다. 그래서 건수보다 제때 내는 것과 기사에 남는 한 문장을 기준으로 삼았습니다.</p>
+        </div>
+        <p class="refs">근거 <a href="https://reformparty.kr/news/briefing/965-briefing-301">논평 원문 5.7 ↗</a><a href="https://reformparty.kr/news/briefing/966-briefing-302">논평 원문 5.9 ↗</a><a href="https://www.newsis.com/view/NISX20240509_0002728909">뉴시스 ↗</a><a href="https://www.joongang.co.kr/article/25247534">중앙일보 ↗</a></p>
+        <p class="apply"><strong>기업 PR에서는</strong>현안 입장문과 보도 대응 문안, 기사에 인용되는 핵심 문장 설계</p>
+      </div>
+    </article>
+
+    <article class="case">
+      <div class="case-head">
+        <div>
+          <p class="tag">REFRAMING · 2018</p>
+          <h3>'바미하다' 논평</h3>
+          <p class="org">바른미래당 중앙당 부대변인 · 비판의 언어를 조직의 가치로</p>
+        </div>
+        <blockquote>“우리는 더욱 ‘바미’할 것”<small>2018.10.14 논평 중 (뉴시스 보도)</small></blockquote>
+      </div>
+      <div class="case-body">
+        <ul class="flow"><li>프레임 분석</li><li>메시지 재구성</li><li>언론 보도</li></ul>
+        <dl class="star">
+          <div><dt>상황</dt><dd>찬반 대신 절충안을 내는 당의 방식을 비꼬는 말로 '바미하다'가 쓰이고 있었습니다.</dd></div>
+          <div><dt>판단</dt><dd>표현을 피하지 않고 그대로 받아 서로 다른 입장이 대화해 대안을 찾는 과정의 가치로 풀기로 했습니다.</dd></div>
+          <div><dt>결과</dt><dd>2018년 10월 14일 논평으로 정리했습니다. 뉴시스가 보도했고 한겨레가 논평의 설득력을 다뤘습니다.</dd></div>
+        </dl>
+        <div class="more">
+          <p><strong>실행</strong>비판에 쓰인 단어는 유지하고, 논평의 중심을 의사결정 속도에서 대화·숙의·절충으로 옮겼습니다.</p>
+        </div>
+        <p class="refs">근거 <a href="https://mobile.newsis.com/view/NISX20181014_0000442065">뉴시스 ↗</a><a href="https://www.hani.co.kr/arti/politics/polibar/871654.html">한겨레 ↗</a></p>
+        <p class="apply"><strong>기업 PR에서는</strong>부정 이슈·밈에 대한 리프레이밍과 브랜드 보이스 정립</p>
+      </div>
+    </article>
+    <p class="page-no"><span>주이삭 · PR Manager</span><span>2 / 5</span></p>
+  </section>
+
+  <!-- ===== 3. Cases 3-4 ===== -->
+  <section class="page">
+    <p class="eyebrow">CASES 3 – 4</p>
+    <h2>대표 사례: 현장과 조직</h2>
+    <p class="lead">공보실에서는 주로 카메라 뒤에서, 현장이 화면에 제대로 담기도록 하는 일을 했습니다.</p>
+
+    <article class="case">
+      <div class="case-head has-photo">
+        <div>
+          <p class="tag">MEDIA OPERATIONS · 2017</p>
+          <h3>대통령선거 공보현장팀</h3>
+          <p class="org">국민의당 중앙당 공보실 · 총괄간사 · 기자가 취재할 조건부터</p>
+        </div>
+        <div class="case-photo" style="background-image:url(assets/cases/press-2017.jpg)"><small>사진: 시사위크 (주이삭 의원 제공)</small></div>
+      </div>
+      <div class="case-body">
+        <ul class="flow"><li>사전 답사</li><li>촬영 위치 확정</li><li>유관 팀 협의</li><li>현장 조율</li></ul>
+        <dl class="star">
+          <div><dt>상황</dt><dd>시장 방문과 현장 시찰 때 시민, 기자, 후보, 경호 인력이 한꺼번에 움직여 촬영 위치와 동선이 겹쳤습니다.</dd></div>
+          <div><dt>판단</dt><dd>유세팀보다 먼저 현장에 들어가 취재 동선과 촬영 위치를 정하는 '공보선행'을 도입했습니다.</dd></div>
+          <div><dt>결과</dt><dd>후보가 도착할 때 기자단은 이미 촬영 위치와 이동 경로를 알고 움직였습니다.</dd></div>
+        </dl>
+        <div class="more">
+          <p><strong>실행</strong>45인승 버스 2대로 기자단을 운영했습니다. 현장을 먼저 돌아본 뒤 유세팀·홍보팀·경호팀·영상기자 대표단과 동선을 맞췄고, 취재가 막히면 그 자리에서 가능한 범위를 조정했습니다.</p>
+          <p><strong>협업 범위</strong>취재 동선은 경호·유세·홍보팀, 영상기자 대표단과 함께 정했습니다.</p>
+        </div>
+        <p class="refs">근거 <a href="https://www.sisaweek.com/news/articleView.html?idxno=116116">시사위크 인터뷰 ↗</a></p>
+        <p class="apply"><strong>기업 PR에서는</strong>제품 출시·기자간담회·대형 행사의 미디어 운영</p>
+      </div>
+    </article>
+
+    <article class="case">
+      <div class="case-head has-photo">
+        <div>
+          <p class="tag">PR TEAM SETUP · 2020</p>
+          <h3>창당준비위원회 공보팀장</h3>
+          <p class="org">국민의당 창당준비위원회 · 총선 공보 · 대변인이 현장에 있어도 공보는 계속</p>
+        </div>
+        <div class="case-photo" style="background-image:url(assets/cases/team-2020.jpg?v=4)"><small>영상: 국민의당 e-창당대회 생중계 갈무리 (2020.02.23)</small></div>
+      </div>
+      <div class="case-body">
+        <ul class="flow"><li>인력 영입</li><li>역할 분담</li><li>문안 작성·배분</li><li>현장 지원</li></ul>
+        <dl class="star">
+          <div><dt>상황</dt><dd>창당과 총선 준비가 겹치고 대변인단이 현장 일정에 집중하면서, 공식 메시지를 안정적으로 준비할 체계가 필요했습니다.</dd></div>
+          <div><dt>판단</dt><dd>현장 지원·행정 실무와 논평·브리핑 문안 작성의 담당을 나눴습니다.</dd></div>
+          <div><dt>결과</dt><dd>대변인단이 현장에 나가 있는 동안에도 논평과 브리핑 문안을 준비해 전달했습니다.</dd></div>
+        </dl>
+        <div class="more">
+          <p><strong>맡은 일</strong>공보 경력 실무자 2명을 영입해 팀을 꾸렸습니다. 총선 기간에는 논평과 브리핑 문안 작성·배분을 맡았습니다.</p>
+          <p><strong>실행</strong>현장 지원과 행정 업무를 나누고, 대변인단이 쓸 문안을 마련해 전달했습니다.</p>
+        </div>
+        <p class="apply"><strong>기업 PR에서는</strong>언론홍보팀 업무에 빠르게 적응하고, 보도자료 승인 프로세스와 팀 운영을 실무에서 뒷받침</p>
+      </div>
+    </article>
+    <p class="page-no"><span>주이삭 · PR Manager</span><span>3 / 5</span></p>
+  </section>
+
+  <!-- ===== 4. Why + strengths + career ===== -->
+  <section class="page">
+    <p class="eyebrow">WHY CORPORATE</p>
+    <h2>왜 기업 PR인가</h2>
+    <p class="lead">2016년부터 정치 현장에서 해 온 일은 결국 조직의 메시지로 신뢰를 얻는 일이었습니다. 8년의 선출직 활동을 마무리한 지금, 그 일을 기업의 언어로 이어 가려 합니다.</p>
+    <ol class="why">
+      <li><b>01</b><div><h3>같은 일, 다른 무대</h3><p>언론 대응, 위기 메시지, 이해관계자 조율은 기업 PR의 주요 업무와 같습니다. 바뀌는 것은 상대하는 기자와 이해관계자입니다. 산업·경제부 기자를 직접 상대한 경험은 아직 없습니다. 다만 기자는 부서를 옮기고, 2016년부터 함께 일해 온 정치부 기자들과 그 동료·선후배를 통해 접점을 넓혀 갈 수 있습니다.</p></div></li>
+      <li><b>02</b><div><h3>규제를 아는 PR</h3><p>입법·예산·감사를 직접 해 본 경험으로, 정책 변화가 기업에 미칠 영향을 먼저 읽고 대응 메시지를 준비할 수 있습니다.</p></div></li>
+      <li><b>03</b><div><h3>정치색이 아닌 실무</h3><p>2026년 지방선거에서 서울시의원에 도전했고 낙선했습니다. 그 선거를 끝으로 선출직을 마쳤고 다시 출마할 계획은 없습니다. 한 정당의 입장을 대변하던 자리에서 나와 회사의 평판과 이익을 지키는 실무자로 일하려 합니다.</p></div></li>
+    </ol>
+
+    <p class="sub">기업 PR에 바로 쓸 수 있는 역량</p>
+    <ul class="strengths">
+      <li><b>미디어 릴레이션</b><span>2016년부터 정치부 출입기자 대응, 취재 지원, 기자단 운영</span></li>
+      <li><b>위기 커뮤니케이션</b><span>현안 당일 공식 입장, 부정 프레임의 재구성</span></li>
+      <li><b>메시지 전략 · 작성</b><span>공식 논평·브리핑·발표문 직접 기획과 작성</span></li>
+      <li><b>대관 · Public Affairs</b><span>8년간 지방의회에서 입법·예산·감사 수행</span></li>
+      <li><b>PR 조직 운영</b><span>인력 영입, 업무 분장, 생산·검토·배포 과정 설계</span></li>
+      <li><b>데이터 기반 인사이트</b><span>여론조사 설계·분석, 보고서와 영상 콘텐츠화</span></li>
+    </ul>
+
+    <p class="sub">경력 한눈에</p>
+    <ul class="career">
+      <li><time>2024.07 – 현재</time><div><b>(재)개혁연구원 부원장</b> <span>여론조사 기획·분석, 정책 홍보전략, 콘텐츠 기획 (2026.08부터 상근)</span></div></li>
+      <li><time>2025.04 – 2025.06</time><div><b>개혁신당 대선 공보단 부단장</b> <span>메시지 주제별 실무 배분, 공보 인력 충원·교육</span></div></li>
+      <li><time>2024.02 – 2024.05</time><div><b>개혁신당 대변인 · 수석부대변인</b> <span>현안 공식 논평 기획·작성·배포</span></div></li>
+      <li><time>2021.08 – 2022.08</time><div><b>국민의힘 부대변인</b> <span>대변인단 현장 홍보와 언론 취재 지원</span></div></li>
+      <li><time>2020.02 – 2020.04</time><div><b>국민의당 공보팀장 · 부대변인</b> <span>공보팀 구성, 논평·브리핑 문안 작성·배분</span></div></li>
+      <li><time>2018.09 – 2019.09</time><div><b>바른미래당 부대변인</b> <span>공식 논평과 대외 메시지 작성</span></div></li>
+      <li><time>2018.07 – 2026.06</time><div><b>서대문구의원 (제8·9대)</b> <span>조례 46건 대표발의·42건 가결, 예산·결산 심의, 행정사무감사</span></div></li>
+      <li><time>2016.06 – 2018.06</time><div><b>국민의당·바른미래당 공보실 간사</b> <span>출입기자 대응, 논평·브리핑 초안, 2017 대선 기자단 운영</span></div></li>
+    </ul>
+    <p class="note">2018년 이후의 대변인·공보 직책은 서대문구의원 재임 중 겸직이었습니다. 전체 경력과 학력·자격은 이력서에 있습니다.</p>
+    <p class="page-no"><span>주이삭 · PR Manager</span><span>4 / 5</span></p>
+  </section>
+
+  <!-- ===== 5. Sources ===== -->
+  <section class="page">
+    <p class="eyebrow">PRESS &amp; RECORDS</p>
+    <h2>근거 자료</h2>
+    <p class="lead">기사와 공식 자료마다 그 자료로 확인할 수 있는 내용을 함께 적었습니다. 링크가 열리지 않으면 주소를 직접 입력하시면 됩니다.</p>
+    <ul class="sources">
+      <li><b>개혁신당</b><div>민정수석 신설 및 임명 관련 논평 원문 (2024.05.07)<small>대변인 명의 논평 전문</small><a href="https://reformparty.kr/news/briefing/965-briefing-301">reformparty.kr/news/briefing/965-briefing-301</a></div></li>
+      <li><b>개혁신당</b><div>대통령 기자회견 관련 논평 원문 (2024.05.09)<small>대변인 명의 논평 전문</small><a href="https://reformparty.kr/news/briefing/966-briefing-302">reformparty.kr/news/briefing/966-briefing-302</a></div></li>
+      <li><b>뉴시스</b><div>대통령 기자회견 관련 개혁신당 논평 보도 (2024)<small>대변인 명의와 논평 내용</small><a href="https://www.newsis.com/view/NISX20240509_0002728909">newsis.com/view/NISX20240509_0002728909</a></div></li>
+      <li><b>중앙일보</b><div>민정수석 부활 관련 논평 인용 (2024)<small>대변인 논평이 기사에 인용된 사실</small><a href="https://www.joongang.co.kr/article/25247534">joongang.co.kr/article/25247534</a></div></li>
+      <li><b>뉴시스</b><div>'바미함' 논평 보도 (2018)<small>부대변인 명의와 논평 내용</small><a href="https://mobile.newsis.com/view/NISX20181014_0000442065">mobile.newsis.com/view/NISX20181014_0000442065</a></div></li>
+      <li><b>한겨레</b><div>'바미하다' 논평 관련 보도·평가 (2018)<small>논평에 대한 언론의 평가</small><a href="https://www.hani.co.kr/arti/politics/polibar/871654.html">hani.co.kr/arti/politics/polibar/871654.html</a></div></li>
+      <li><b>시사위크</b><div>중앙당 공보실 간사 인터뷰 (2018)<small>공보실 간사 시절의 업무</small><a href="https://www.sisaweek.com/news/articleView.html?idxno=116116">sisaweek.com/news/articleView.html?idxno=116116</a></div></li>
+      <li><b>유튜브</b><div>〈숫자로 보는 대한민국〉 1회<small>여론조사 결과를 영상 콘텐츠로 만든 사례</small><a href="https://youtu.be/f6ZVg8D-z9k">youtu.be/f6ZVg8D-z9k</a></div></li>
+    </ul>
+
+    <div class="end">
+      <div>
+        <h3>나머지 사례와 전체 기록은 사이트에 있습니다</h3>
+        <p>여론조사·콘텐츠, 대선 공보단, 선거공보물 등 사례 4개와 언론 보도·공식 기록을 더 볼 수 있습니다.</p>
+        <ul class="url-list">
+          <li><b>사이트</b><a href="https://ju-isaac.github.io">ju-isaac.github.io</a></li>
+          <li><b>이력서</b><a href="https://ju-isaac.github.io/resume.html">ju-isaac.github.io/resume.html</a></li>
+          <li><b>연락처</b>010-3230-4504 · isaactic.lab@gmail.com</li>
+        </ul>
+      </div>
+      <div class="qr"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 -4 37 37" shape-rendering="crispEdges" role="img" aria-label="QR"><rect x="-4" y="-4" width="37" height="37" fill="#fff"/><path fill="#111" d="M0 0h1v1h-1zM1 0h1v1h-1zM2 0h1v1h-1zM3 0h1v1h-1zM4 0h1v1h-1zM5 0h1v1h-1zM6 0h1v1h-1zM8 0h1v1h-1zM10 0h1v1h-1zM18 0h1v1h-1zM22 0h1v1h-1zM23 0h1v1h-1zM24 0h1v1h-1zM25 0h1v1h-1zM26 0h1v1h-1zM27 0h1v1h-1zM28 0h1v1h-1zM0 1h1v1h-1zM6 1h1v1h-1zM16 1h1v1h-1zM17 1h1v1h-1zM18 1h1v1h-1zM19 1h1v1h-1zM22 1h1v1h-1zM28 1h1v1h-1zM0 2h1v1h-1zM2 2h1v1h-1zM3 2h1v1h-1zM4 2h1v1h-1zM6 2h1v1h-1zM9 2h1v1h-1zM12 2h1v1h-1zM13 2h1v1h-1zM15 2h1v1h-1zM16 2h1v1h-1zM17 2h1v1h-1zM20 2h1v1h-1zM22 2h1v1h-1zM24 2h1v1h-1zM25 2h1v1h-1zM26 2h1v1h-1zM28 2h1v1h-1zM0 3h1v1h-1zM2 3h1v1h-1zM3 3h1v1h-1zM4 3h1v1h-1zM6 3h1v1h-1zM8 3h1v1h-1zM9 3h1v1h-1zM11 3h1v1h-1zM12 3h1v1h-1zM14 3h1v1h-1zM15 3h1v1h-1zM16 3h1v1h-1zM20 3h1v1h-1zM22 3h1v1h-1zM24 3h1v1h-1zM25 3h1v1h-1zM26 3h1v1h-1zM28 3h1v1h-1zM0 4h1v1h-1zM2 4h1v1h-1zM3 4h1v1h-1zM4 4h1v1h-1zM6 4h1v1h-1zM8 4h1v1h-1zM12 4h1v1h-1zM13 4h1v1h-1zM14 4h1v1h-1zM16 4h1v1h-1zM17 4h1v1h-1zM18 4h1v1h-1zM22 4h1v1h-1zM24 4h1v1h-1zM25 4h1v1h-1zM26 4h1v1h-1zM28 4h1v1h-1zM0 5h1v1h-1zM6 5h1v1h-1zM8 5h1v1h-1zM9 5h1v1h-1zM11 5h1v1h-1zM13 5h1v1h-1zM14 5h1v1h-1zM15 5h1v1h-1zM17 5h1v1h-1zM19 5h1v1h-1zM20 5h1v1h-1zM22 5h1v1h-1zM28 5h1v1h-1zM0 6h1v1h-1zM1 6h1v1h-1zM2 6h1v1h-1zM3 6h1v1h-1zM4 6h1v1h-1zM5 6h1v1h-1zM6 6h1v1h-1zM8 6h1v1h-1zM10 6h1v1h-1zM12 6h1v1h-1zM14 6h1v1h-1zM16 6h1v1h-1zM18 6h1v1h-1zM20 6h1v1h-1zM22 6h1v1h-1zM23 6h1v1h-1zM24 6h1v1h-1zM25 6h1v1h-1zM26 6h1v1h-1zM27 6h1v1h-1zM28 6h1v1h-1zM8 7h1v1h-1zM9 7h1v1h-1zM10 7h1v1h-1zM12 7h1v1h-1zM14 7h1v1h-1zM17 7h1v1h-1zM0 8h1v1h-1zM4 8h1v1h-1zM6 8h1v1h-1zM7 8h1v1h-1zM8 8h1v1h-1zM9 8h1v1h-1zM11 8h1v1h-1zM13 8h1v1h-1zM14 8h1v1h-1zM15 8h1v1h-1zM16 8h1v1h-1zM17 8h1v1h-1zM20 8h1v1h-1zM21 8h1v1h-1zM22 8h1v1h-1zM23 8h1v1h-1zM24 8h1v1h-1zM25 8h1v1h-1zM28 8h1v1h-1zM3 9h1v1h-1zM7 9h1v1h-1zM12 9h1v1h-1zM17 9h1v1h-1zM18 9h1v1h-1zM21 9h1v1h-1zM22 9h1v1h-1zM23 9h1v1h-1zM24 9h1v1h-1zM25 9h1v1h-1zM26 9h1v1h-1zM27 9h1v1h-1zM28 9h1v1h-1zM1 10h1v1h-1zM2 10h1v1h-1zM4 10h1v1h-1zM5 10h1v1h-1zM6 10h1v1h-1zM8 10h1v1h-1zM10 10h1v1h-1zM11 10h1v1h-1zM13 10h1v1h-1zM14 10h1v1h-1zM15 10h1v1h-1zM17 10h1v1h-1zM21 10h1v1h-1zM22 10h1v1h-1zM28 10h1v1h-1zM8 11h1v1h-1zM9 11h1v1h-1zM12 11h1v1h-1zM13 11h1v1h-1zM15 11h1v1h-1zM16 11h1v1h-1zM17 11h1v1h-1zM18 11h1v1h-1zM20 11h1v1h-1zM23 11h1v1h-1zM24 11h1v1h-1zM25 11h1v1h-1zM27 11h1v1h-1zM28 11h1v1h-1zM3 12h1v1h-1zM6 12h1v1h-1zM9 12h1v1h-1zM11 12h1v1h-1zM12 12h1v1h-1zM13 12h1v1h-1zM17 12h1v1h-1zM19 12h1v1h-1zM21 12h1v1h-1zM27 12h1v1h-1zM0 13h1v1h-1zM5 13h1v1h-1zM7 13h1v1h-1zM8 13h1v1h-1zM10 13h1v1h-1zM11 13h1v1h-1zM12 13h1v1h-1zM13 13h1v1h-1zM14 13h1v1h-1zM16 13h1v1h-1zM17 13h1v1h-1zM18 13h1v1h-1zM22 13h1v1h-1zM23 13h1v1h-1zM24 13h1v1h-1zM25 13h1v1h-1zM26 13h1v1h-1zM27 13h1v1h-1zM28 13h1v1h-1zM0 14h1v1h-1zM3 14h1v1h-1zM4 14h1v1h-1zM5 14h1v1h-1zM6 14h1v1h-1zM7 14h1v1h-1zM8 14h1v1h-1zM9 14h1v1h-1zM10 14h1v1h-1zM11 14h1v1h-1zM12 14h1v1h-1zM16 14h1v1h-1zM18 14h1v1h-1zM20 14h1v1h-1zM21 14h1v1h-1zM22 14h1v1h-1zM25 14h1v1h-1zM26 14h1v1h-1zM28 14h1v1h-1zM0 15h1v1h-1zM1 15h1v1h-1zM2 15h1v1h-1zM3 15h1v1h-1zM5 15h1v1h-1zM7 15h1v1h-1zM8 15h1v1h-1zM9 15h1v1h-1zM10 15h1v1h-1zM12 15h1v1h-1zM14 15h1v1h-1zM17 15h1v1h-1zM18 15h1v1h-1zM22 15h1v1h-1zM24 15h1v1h-1zM27 15h1v1h-1zM28 15h1v1h-1zM1 16h1v1h-1zM2 16h1v1h-1zM3 16h1v1h-1zM6 16h1v1h-1zM11 16h1v1h-1zM12 16h1v1h-1zM13 16h1v1h-1zM14 16h1v1h-1zM15 16h1v1h-1zM16 16h1v1h-1zM18 16h1v1h-1zM20 16h1v1h-1zM21 16h1v1h-1zM27 16h1v1h-1zM0 17h1v1h-1zM4 17h1v1h-1zM7 17h1v1h-1zM10 17h1v1h-1zM12 17h1v1h-1zM17 17h1v1h-1zM18 17h1v1h-1zM22 17h1v1h-1zM24 17h1v1h-1zM25 17h1v1h-1zM27 17h1v1h-1zM28 17h1v1h-1zM2 18h1v1h-1zM3 18h1v1h-1zM6 18h1v1h-1zM7 18h1v1h-1zM13 18h1v1h-1zM14 18h1v1h-1zM15 18h1v1h-1zM18 18h1v1h-1zM20 18h1v1h-1zM21 18h1v1h-1zM22 18h1v1h-1zM26 18h1v1h-1zM28 18h1v1h-1zM4 19h1v1h-1zM7 19h1v1h-1zM9 19h1v1h-1zM10 19h1v1h-1zM11 19h1v1h-1zM13 19h1v1h-1zM15 19h1v1h-1zM16 19h1v1h-1zM19 19h1v1h-1zM20 19h1v1h-1zM22 19h1v1h-1zM27 19h1v1h-1zM28 19h1v1h-1zM0 20h1v1h-1zM1 20h1v1h-1zM2 20h1v1h-1zM3 20h1v1h-1zM6 20h1v1h-1zM7 20h1v1h-1zM9 20h1v1h-1zM11 20h1v1h-1zM12 20h1v1h-1zM13 20h1v1h-1zM19 20h1v1h-1zM20 20h1v1h-1zM21 20h1v1h-1zM22 20h1v1h-1zM23 20h1v1h-1zM24 20h1v1h-1zM25 20h1v1h-1zM28 20h1v1h-1zM11 21h1v1h-1zM12 21h1v1h-1zM13 21h1v1h-1zM14 21h1v1h-1zM16 21h1v1h-1zM18 21h1v1h-1zM19 21h1v1h-1zM20 21h1v1h-1zM24 21h1v1h-1zM28 21h1v1h-1zM0 22h1v1h-1zM1 22h1v1h-1zM2 22h1v1h-1zM3 22h1v1h-1zM4 22h1v1h-1zM5 22h1v1h-1zM6 22h1v1h-1zM8 22h1v1h-1zM9 22h1v1h-1zM10 22h1v1h-1zM12 22h1v1h-1zM16 22h1v1h-1zM17 22h1v1h-1zM19 22h1v1h-1zM20 22h1v1h-1zM22 22h1v1h-1zM24 22h1v1h-1zM25 22h1v1h-1zM26 22h1v1h-1zM28 22h1v1h-1zM0 23h1v1h-1zM6 23h1v1h-1zM9 23h1v1h-1zM12 23h1v1h-1zM14 23h1v1h-1zM17 23h1v1h-1zM18 23h1v1h-1zM19 23h1v1h-1zM20 23h1v1h-1zM24 23h1v1h-1zM27 23h1v1h-1zM0 24h1v1h-1zM2 24h1v1h-1zM3 24h1v1h-1zM4 24h1v1h-1zM6 24h1v1h-1zM8 24h1v1h-1zM10 24h1v1h-1zM13 24h1v1h-1zM14 24h1v1h-1zM15 24h1v1h-1zM16 24h1v1h-1zM18 24h1v1h-1zM19 24h1v1h-1zM20 24h1v1h-1zM21 24h1v1h-1zM22 24h1v1h-1zM23 24h1v1h-1zM24 24h1v1h-1zM25 24h1v1h-1zM28 24h1v1h-1zM0 25h1v1h-1zM2 25h1v1h-1zM3 25h1v1h-1zM4 25h1v1h-1zM6 25h1v1h-1zM9 25h1v1h-1zM11 25h1v1h-1zM12 25h1v1h-1zM13 25h1v1h-1zM17 25h1v1h-1zM19 25h1v1h-1zM21 25h1v1h-1zM23 25h1v1h-1zM27 25h1v1h-1zM0 26h1v1h-1zM2 26h1v1h-1zM3 26h1v1h-1zM4 26h1v1h-1zM6 26h1v1h-1zM9 26h1v1h-1zM10 26h1v1h-1zM12 26h1v1h-1zM15 26h1v1h-1zM18 26h1v1h-1zM19 26h1v1h-1zM20 26h1v1h-1zM21 26h1v1h-1zM25 26h1v1h-1zM26 26h1v1h-1zM27 26h1v1h-1zM28 26h1v1h-1zM0 27h1v1h-1zM6 27h1v1h-1zM11 27h1v1h-1zM12 27h1v1h-1zM15 27h1v1h-1zM16 27h1v1h-1zM20 27h1v1h-1zM21 27h1v1h-1zM22 27h1v1h-1zM23 27h1v1h-1zM24 27h1v1h-1zM25 27h1v1h-1zM27 27h1v1h-1zM28 27h1v1h-1zM0 28h1v1h-1zM1 28h1v1h-1zM2 28h1v1h-1zM3 28h1v1h-1zM4 28h1v1h-1zM5 28h1v1h-1zM6 28h1v1h-1zM8 28h1v1h-1zM9 28h1v1h-1zM12 28h1v1h-1zM13 28h1v1h-1zM19 28h1v1h-1zM20 28h1v1h-1zM21 28h1v1h-1zM22 28h1v1h-1zM25 28h1v1h-1zM27 28h1v1h-1z"/></svg></div>
+    </div>
+    <p class="page-no"><span>주이삭 · PR Manager</span><span>5 / 5</span></p>
+  </section>
+</body>
+</html>
